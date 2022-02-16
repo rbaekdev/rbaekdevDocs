@@ -23,7 +23,7 @@ const result = await s3.putObject(params, function(err, data){
 
 const getResult = async () => {
   try {
-    const result =  s3.putObject(params).promise();
+    const result = s3.putObject(params).promise();
     return result;
   } catch (err) {
     console.log("There was an error putting the object: ", err);
