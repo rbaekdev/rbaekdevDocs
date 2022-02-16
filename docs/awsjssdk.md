@@ -14,16 +14,17 @@ const result = await s3.putObject(params, function(err, data){
     if(err) console.log("There was an error putting the object: ", err)
     else return data
 }).promise();
+//m'kay
 ```
 :::
 
 
 ```js  jstitle="Node.js Lambda - AWS async service call"
-//Do this instead
+//Do something like this instead
 
 const getResult = async () => {
   try {
-    const result = s3.putObject(params).promise();
+    const result = await s3.putObject(params).promise();
     return result;
   } catch (err) {
     console.log("There was an error putting the object: ", err);

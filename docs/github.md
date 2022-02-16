@@ -25,7 +25,7 @@ $ git config --global user.email  "email"
 //Windows
 $ choco install gh
 //Mac
-brew install gh
+$ brew install gh
 
 $ gh auth login
 ```
@@ -67,8 +67,8 @@ $ git push origin main
 
 ```js
 // Update Git on Windows
-git update-git-for-windows
+$ git update-git-for-windows
 
 // Update Git on Mac
-brew upgrade git
+$ brew upgrade git
 ```

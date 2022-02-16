@@ -43,7 +43,7 @@ const config = {
 				},
 				items: [
 					{ to: "/blog", label: "Blog", position: "left" },
-					{ to: "/code", label: "Code Examples", position: "left" },
+					{ to: "/code", label: "Examples", position: "left" },
 					{
 						type: "doc",
 						docId: "index",
