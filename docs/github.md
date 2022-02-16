@@ -47,13 +47,13 @@ $ git push origin branchName
 ### Branches
 
 ```js
-//Default Branch "master"
+//Default Branch "main"
 
 // Create "hotfix" branch and switch to it [used to be $ git checkout -b hotfix]
 $ git switch -c hotfix
 // Commit all with message
 $ git commit -a -m "[hotfix 1a092] Login error fix"
- // Switch to "master" branch [used to be $ git checkout main]
+ // Switch to "main" branch [used to be $ git checkout main]
 $ git switch main
 // Merge "hotfix" branch to "main"
 $ git merge hotfix
