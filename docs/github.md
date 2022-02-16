@@ -21,7 +21,12 @@ $ git config --global user.email  "email"
 
 ```js
 // Install Github CLI
+
+//Windows
 $ choco install gh
+//Mac
+brew install gh
+
 $ gh auth login
 ```
 
@@ -33,6 +38,7 @@ $ gh repo create repoName --private // Private repo flag
 $ git init
 $ git add .
 $ git remote add origin "../remote.git"
+$ git branch -c branchName
 $ git push origin branchName
 ```
 
@@ -47,14 +53,14 @@ $ git push origin branchName
 $ git switch -c hotfix
 // Commit all with message
 $ git commit -a -m "[hotfix 1a092] Login error fix"
- // Switch to "master" branch [used to be $ git checkout master]
-$ git switch master
-// Merge "hotfix" branch to "master"
+ // Switch to "master" branch [used to be $ git checkout main]
+$ git switch main
+// Merge "hotfix" branch to "main"
 $ git merge hotfix
 // Delete "hotfix" branch
 $ git branch -d hotfix
-// Push "master" branch to remote "origin"
-$ git push origin master
+// Push "main" branch to remote "origin"
+$ git push origin main
 ```
 
 ### Commands
@@ -63,4 +69,6 @@ $ git push origin master
 // Update Git on Windows
 git update-git-for-windows
 
+// Update Git on Mac
+brew upgrade git
 ```
