@@ -22,7 +22,7 @@ export default function Code() {
 					boxSizing: "border-box",
 					overflow: "hidden",
 				}}>
-				<Button variant="contained">Clicky </Button>
+				<Button variant="contained">Coming soon.. </Button>
 			</Box>
 		</Layout>
 	);

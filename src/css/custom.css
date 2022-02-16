@@ -33,8 +33,3 @@ html[data-theme="dark"] .docusaurus-highlight-code-line {
 .main-wrapper {
 	position: relative;
 }
-
-.admonition-content button {
-	background-color: blue;
-	color: white;
-}
