@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # AWS JavaScript SDK
@@ -10,8 +10,8 @@ sidebar_position: 3
 
 ```js 
 //This is bad
-const result = await s3.putObject(params, function(err, data){
-    if(err) console.log("There was an error putting the object: ", err)
+const result = await s3.listObjectsV2(params, function(err, data){
+    if(err) console.log("There was an error listing the objects: ", err)
     else return data
 }).promise();
 //m'kay
@@ -21,15 +21,9 @@ const result = await s3.putObject(params, function(err, data){
 
 ```js  jstitle="Node.js Lambda - AWS async service call"
 //Do something like this instead
-
-const getResult = async () => {
   try {
-    const result = await s3.putObject(params).promise();
-    return result;
+    const result = await s3.listObjectsV2(params).promise();
   } catch (err) {
-    console.log("There was an error putting the object: ", err);
+    console.log("There was an error listing the objects: ", err);
   }
-};
-
-getResult();
 ```

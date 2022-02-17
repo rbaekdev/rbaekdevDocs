@@ -47,12 +47,12 @@ $ git push origin branchName
 ### Branches
 
 ```js
-//Default Branch "main"
+// Default Branch "main"
 
 // Create "hotfix" branch and switch to it [used to be $ git checkout -b hotfix]
 $ git switch -c hotfix
 // Commit all with message
-$ git commit -a -m "[hotfix 1a092] Login error fix"
+$ git commit -a -m "[hotfix 1a092] Login error fix" 
  // Switch to "main" branch [used to be $ git checkout main]
 $ git switch main
 // Merge "hotfix" branch to "main"
@@ -60,8 +60,36 @@ $ git merge hotfix
 // Delete "hotfix" branch
 $ git branch -d hotfix
 // Push "main" branch to remote "origin"
-$ git push origin main
+$ git push  origin main
 ```
+
+### Teamwork
+
+```js
+// Example with 'main' and 'dev' branches
+
+// Starting point - 'dev' is same as 'main' and currently on 'main' branch
+$ git switch dev
+
+// ------
+// [ Make some changes in dev branch ]
+// ------
+
+$ git commit -a -m "Commit Message"
+$ git push origin dev
+
+// If error [local !== repo]
+    $ git pull --rebase origin dev
+    $ git push origin dev
+// endIf
+
+// You should probably not be doing this part!
+$ git switch main
+$ git merge dev
+$ git commit -a -m "Merge Message"
+$ git push  origin main
+```
+
 
 ### Commands
 
