@@ -90,6 +90,17 @@ $ git commit -a -m "Merge Message"
 $ git push  origin main
 ```
 
+### Custom Files in Branch
+1. Rename files. <br />**For example:** <em>variesComponent.js</em>, needs 2 versions => <em>variesComponent-dev.js</em> and <em>variesComponent-prod.js</em>  
+2. Add variesComponent.js to .gitignore 
+
+```jsx
+$ git switch dev
+$ cp variesComponent-dev.js variesComponent.js
+
+$ git switch main
+$ cp variesComponent-prod.js variesComponent.js
+```
 
 ### Commands
 
